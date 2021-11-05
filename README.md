@@ -33,6 +33,8 @@ All above RDMS uses SQL (Structured Query Language).
 - Used to define table & structures.
 - SQL code is not always portable from one RDBMS to another.
 
+
+
 ## Database Queries
 DB cQueries are requests that will be sent to DBMS to fetch some specific information. 
 As DB strucures gets more & more complex, it becomes more & more difficult to get specific pieces of information.
@@ -64,6 +66,20 @@ A foreign key can also be used to relate the same table that has the foreign key
 
 ![image](https://user-images.githubusercontent.com/28825619/140562942-a4cb3175-b5f9-478b-9f31-d19cf3ee33bb.png)
 
+---
 
+## SQL Basics
 
+SQL is a language (not a programming language) that can be used to communicate with RDBMS.
+
+SQL implementations vary between systems.
+
+SQL is a hybrid language. It's a package of 4 languages:
+1. Data Query Language - Used to query database info & get information that's already stored.
+2. Data Definition Language - Used for defining database schemas.
+3. Data Control Language - Used for defining security rules.
+4. Data Manipulation Language - Used for IUD(Inserting, Updating, Deleting) ops.
+
+### Queries
+In SQL, it's set of instruction given to RDBMS to retrieve data that you want to retrieve. 
 
