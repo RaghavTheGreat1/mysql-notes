@@ -44,6 +44,7 @@ As DB strucures gets more & more complex, it becomes more & more difficult to ge
 1. Column - Vertical
 2. Row - Horizontal
 3. Primary Key - A unique attribute about a specific entry that can help in identifying the rest entries, either in a row or a column based on design. It also helps in differentiating two or more entries & hence, it should be unique.
+
 | transaction_id | title       | amount | type    | tag      |
 |----------------|-------------|--------|---------|----------|
 | 1              | netflix     | 2499   | outflow | ott      |
@@ -141,7 +142,7 @@ DESCRIBE <table-name>;
 Example:
 
 ```sql
-DESCRIBE studentsl;
+DESCRIBE students;
 ```
 
 ### Deleteting Table
