@@ -196,6 +196,7 @@ INSERT INTO <table-name> VALUES(
 ```
 
 Using the above command, you have to mandatorily enter all the values corresponding to respective columns & that too in same order. You can't skip any of the value else it will throw an error.
+But if you want to use the above syntax and don't want to enter the values of specific column, then add ```sql NULL``` keyword, provided it can be nullable.
 
 **Note**: Strings are always encapsulated in '' or "".
 
@@ -246,3 +247,39 @@ SELECT * FROM students;
 ```
 
 ---
+
+## Constraints
+
+If you want that a column should not have Null values or maybe, should have a unique value, then you can define one using mysql.
+
+```sql
+CREATE TABLE transaction(
+  transaciont_id INT PRIMARY KEY,
+  transaction_name VARCHAR(50) NOT NULL,
+  recepient_id INT UNIQUE,
+);
+```
+
+The above command creates a table which has a column called transaction_name and is non-nullable, which implies, whenever we insert values in table, we have to give the transaction_name. Also, whenever we give recepient_id, that id should be unique in whole table while we insert the values.
+
+### Default Constraint:
+If you don't know some values while inserting it, yet you don't want to make it NULL, then you can specify a default value before hand.
+
+```sql
+CREATE TABLE students(
+  student_id INT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  branch VARCHAR(50) DEFAULT "undecided",
+);
+```
+
+### AUTO_INCREMENT
+If you want to add values in a table thats auto incrementable (like serial number) then it's also possible. This helps in not entering the values that follow a sequence.
+
+```sql
+CREATE TABLE students(
+  student_id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  branch VARCHAR(50) DEFAULT "undecided",
+);
+```
