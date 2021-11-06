@@ -180,3 +180,69 @@ Example:
 ```sql
 ALTER TABLE students DROP COLUMN gpa;
 ```
+
+---
+
+## Inserting Data
+
+```sql
+INSERT INTO <table-name> VALUES(
+  <value>,
+  <value>,
+  .
+  .
+  .
+);
+```
+
+Using the above command, you have to mandatorily enter all the values corresponding to respective columns & that too in same order. You can't skip any of the value else it will throw an error.
+
+**Note**: Strings are always encapsulated in '' or "".
+
+Example:
+```sql
+INSERT INTO students VALUES(
+ 1,
+ 'Raghav Joshi',
+ 'CSE',
+);
+```
+
+## Inserting Specific Data Only
+
+```sql
+INSERT INTO <table-name>(<column-name>, <column-name> ,.... ) VALUES(
+  <value>,
+  <value>,
+  .
+  .
+  .
+);
+```
+
+The above syntax helps in entering values to only specific column. If you aren't willing to add data right now, then this is very useful as it sets the value to NULL.
+
+Example:
+```sql
+INSERT INTO students(student_id, name) VALUES(
+  1,
+  'Raghav Joshi',
+);
+```
+
+> Note: You can't insert values that uses same PRIMARY KEY(if there exists any).
+
+### Reading Data
+
+```sql
+SELECT * FROM <table-name>;
+```
+* commands retrieves the table which includes 'all' entries.
+
+Example:
+
+```sql
+SELECT * FROM students;
+```
+
+---
