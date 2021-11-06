@@ -83,3 +83,11 @@ SQL is a hybrid language. It's a package of 4 languages:
 ### Queries
 In SQL, it's set of instruction given to RDBMS to retrieve data that you want to retrieve. 
 
+### Core Datatypes in mySQL
+1. INT (Integers)
+2. DECIMAL(M,N) [M-> Total number of digits, N-> Post decimal digits]
+3. VARCHAR(L) [L-> Length of characters it can store]
+4. BLOB [Binary Large Object, used to store Large Data]  
+5. DATE [YYYY-MM-DD]
+6. TIMESTAMP [YYYY-MM-DD HH-MM-SS]
+
