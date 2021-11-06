@@ -91,3 +91,91 @@ In SQL, it's set of instruction given to RDBMS to retrieve data that you want to
 5. DATE [YYYY-MM-DD]
 6. TIMESTAMP [YYYY-MM-DD HH-MM-SS]
 
+### Creating Database Tables
+
+1. With Key
+```sql
+CREATE TABLE <table-name> (
+  <column-name> <datatype> <key>,
+);
+```
+Example:
+
+```sql
+CREATE TABLE students (
+  student_id INT PRIMARY KEY,
+  name VARCHAR(20),
+  major VARCHAR(20),
+);
+```
+
+2. Without Key
+```sql
+CREATE TABLE <table-name> (
+  <column-name> <datatype>,
+  <key>(<column-name>),
+);
+```
+Example:
+
+```sql
+CREATE TABLE students (
+  student_id INT,
+  name VARCHAR(20),
+  major VARCHAR(20),
+  PRIMARY KEY(student_id),
+);
+```
+
+Using semi-colon helps mySQL detect the line ending, hence it's neccessary to add one.
+
+`CREATE TABLE` is the keyword that SQL uses to create a table.
+It's not necessary to write `CREATE TABLE` in all caps, you can use in small caps too but convention says to do in all caps so as to differentiate SQL commands.
+
+### Viewing Table
+
+```sql
+DESCRIBE <table-name>;
+```
+
+Example:
+
+```sql
+DESCRIBE studentsl;
+```
+
+### Deleteting Table
+
+```sql
+DROP TABLE <table-name>;
+```
+
+Example:
+
+```sql
+DROP TABLE students;
+```
+
+### Modifying Table
+
+```sql
+ALTER TABLE <table-name> ADD <column-name> <datatype>;
+```
+
+Example:
+
+```sql
+ALTER TABLE students ADD gpa DECIMAL(3,2);
+```
+
+### Deleting Columns
+
+```sql
+ALTER TABLE <table-name> DROP COLUMN <column-name>;
+```
+
+Example:
+
+```sql
+ALTER TABLE students DROP COLUMN gpa;
+```
